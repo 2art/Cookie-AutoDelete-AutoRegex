@@ -10,8 +10,8 @@
     ]
   },
   "description": "__MSG_extensionDescription__",
-  "homepage_url": "https://github.com/Cookie-AutoDelete/Cookie-AutoDelete",
-  "author": "CAD Team",
+  "homepage_url": "https://github.com/2art/Cookie-AutoDelete-Regex",
+  "author": "CAD Team & 2art",
   "default_locale": "en",
   "browser_action": {
     "browser_style": false,
@@ -27,7 +27,7 @@
   },
   "applications": {
     "gecko": {
-      "id": "CookieAutoDelete@kennydo.com",
+      "id": "cadregex@pm.me",
       "strict_min_version": "63.0"
     }
   },
