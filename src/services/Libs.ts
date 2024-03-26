@@ -603,8 +603,9 @@ export const isFirstPartyIsolate = async (): Promise<boolean> => {
 /*
  * Checks if the hostname given is a local file
  */
-export const localFileToRegex = (hostname: string): string => {
+export const localFileToRegex = (hostname: string, format: boolean = true): string => {
   if (hostname === '') return '';
+  if (format == false) return hostname;
   if (hostname.startsWith('file:') || hostname.indexOf('/') === 0) {
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Escaping
     return hostname.replace(/[.*+\-?^${}()|[\]\\]/g, '\\$&');
