@@ -132,7 +132,7 @@ class App extends Component<PopupAppComponentProps, InitialState> {
     if (hostname !== '' && !isAnIP(tab.url) && !hostname.startsWith('file:')) {
       addableHostnames.push(`*.${hostname}`);
       var domainSplit = hostname.split(".", 2)
-      addableHostnames.push(`/(https?:\/\/)?(www\.)?(${domainSplit[0]})\.(${domainSplit[1]})/`);
+      addableHostnames.push(`/(https?:\\/\\/)?(www\\.)?(${domainSplit[0]})\\.(${domainSplit[1]})/`);
     }
 
     if (!this.port) {
