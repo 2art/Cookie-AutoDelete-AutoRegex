@@ -1,6 +1,6 @@
 {
   "name": "cookie-autodelete-regex",
-  "version": "3.8.2",
+  "version": "3.8.2a",
   "description": "Firefox and Chrome browser extension that manages Cookies and other site data",
   "keywords": [
     "cookie",
