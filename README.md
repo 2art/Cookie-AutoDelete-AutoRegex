@@ -10,6 +10,12 @@
 
 Control your cookies! This extension is inspired by [Self-Destructing Cookies](https://addons.mozilla.org/en-US/firefox/addon/self-destructing-cookies/). When a tab closes, any cookies not being used are automatically deleted. Prevent tracking by other cookies and add only the ones you trust. Easily import and export your cookie whitelist.
 
+## AutoRegex Fork Information
+
+This is a fork from the original project that adds one thing only: when whitelisting or greylisting a domain, the popup window offers a ready regex pattern that can be used instead of the domain name, since this addon supports regex patterns.
+
+The reason for making this fork is mainly for myself as I want my expressions in regex, and I often have multiple domains in the same expression, which is only possible via regex. This way you can set a ruleset for multitude of domains in one rule.
+
 ## Main features
 
 - Automatically deletes cookies from closed tabs
