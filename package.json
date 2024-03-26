@@ -1,5 +1,5 @@
 {
-  "name": "cookie-autodelete",
+  "name": "cookie-autodelete-regex",
   "version": "3.8.2",
   "description": "Firefox and Chrome browser extension that manages Cookies and other site data",
   "keywords": [
@@ -77,7 +77,7 @@
   "author": "Kenny Do",
   "contributors": [
     {
-      "name": "CAD Team",
+      "name": "CAD Team, 2art",
       "url": "https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/graphs/contributors"
     }
   ],
