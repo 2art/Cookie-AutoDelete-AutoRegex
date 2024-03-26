@@ -125,14 +125,22 @@ class App extends Component<PopupAppComponentProps, InitialState> {
     const { cache, settings } = state;
     const hostname = getHostname(tab.url);
     const mainDomain = extractMainDomain(hostname);
-    const addableHostnames = [
-      hostname === mainDomain ? undefined : `*.${mainDomain}`,
-      hostname,
-    ].filter(Boolean) as string[];
+    let addableHostnames = [
+      //[ hostname === mainDomain ? undefined : `*.${mainDomain}`, hostname === mainDomain ? undefined : localFileToRegex(`*.${mainDomain}`), ],
+      [ hostname, localFileToRegex(hostname) ]
+    ].filter((e) => e !== undefined) as string[][];
+
     if (hostname !== '' && !isAnIP(tab.url) && !hostname.startsWith('file:')) {
-      addableHostnames.push(`*.${hostname}`);
-      var domainSplit = hostname.split(".", 2)
-      addableHostnames.push(`/(https?:\\/\\/)?(www\\.)?(${domainSplit[0]})\\.(${domainSplit[1]})/`);
+      addableHostnames.push([`*.${hostname}`, localFileToRegex(`*.${hostname}`)]);
+
+      var domainSplit = mainDomain.split(".");
+      var hostnameRegex = `/(https?:\\/\\/)?(www\\.)?(${domainSplit[0]})`;
+      for (var i = 1; i <= domainSplit.length; i++) {
+        if (domainSplit[i] === undefined) continue;
+        hostnameRegex += `\\.${domainSplit[i]}`;
+      }
+      hostnameRegex += "/";
+      addableHostnames.push([hostnameRegex, hostnameRegex]);
     }
 
     if (!this.port) {
@@ -362,33 +370,14 @@ class App extends Component<PopupAppComponentProps, InitialState> {
         </div>
 
         {addableHostnames.map((addableHostname) => (
-          <div
-            key={addableHostname}
-            style={{
-              alignItems: 'center',
-              display: 'flex',
-              margin: '8px 0',
-            }}
-            className="row"
-          >
-            <div
-              style={{
-                flex: 1,
-              }}
-            >
-              {addableHostname}
-            </div>
-            <div
-              className="btn-group"
-              style={{
-                marginLeft: '8px',
-              }}
-            >
+          <div key={addableHostname[0]} style={{alignItems: 'center',display: 'flex',margin: '8px 0',}} className="row">
+            <div style={{flex: 1,}}>{addableHostname[0]}</div>
+            <div className="btn-group" style={{marginLeft: '8px',}}>
               <IconButton
                 className="btn-secondary"
                 onClick={() => {
                   onNewExpression({
-                    expression: localFileToRegex(addableHostname),
+                    expression: addableHostname[1],
                     listType: ListType.GREY,
                     storeId,
                   });
@@ -397,12 +386,11 @@ class App extends Component<PopupAppComponentProps, InitialState> {
                 title={browser.i18n.getMessage('toGreyListText')}
                 text={browser.i18n.getMessage('greyListWordText')}
               />
-
               <IconButton
                 className="btn-primary"
                 onClick={() => {
                   onNewExpression({
-                    expression: localFileToRegex(addableHostname),
+                    expression: addableHostname[1],
                     listType: ListType.WHITE,
                     storeId,
                   });
@@ -411,16 +399,10 @@ class App extends Component<PopupAppComponentProps, InitialState> {
                 title={browser.i18n.getMessage('toWhiteListText')}
                 text={browser.i18n.getMessage('whiteListWordText')}
               />
+              </div>
             </div>
-          </div>
         ))}
-
-        <div
-          className="row"
-          style={{
-            margin: '8px 0',
-          }}
-        >
+        <div className="row" style={{margin: '8px 0',}}>
           <FilteredExpression url={hostname} storeId={storeId} />
         </div>
         <ActivityTable numberToShow={3} decisionFilter={FilterOptions.CLEAN} />
