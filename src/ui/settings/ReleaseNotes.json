@@ -307,7 +307,7 @@
       "version": "1.2.0",
       "notes": [
         "New Feature: Cookie Cleanup (Ignore Open Tabs) in popup menu. This lets you clear cookies based on the WhiteList alone.",
-        "Added Localization Support. Instructions to translate Cookie AutoDelete are on GitHub Page",
+        "Added Localization Support. Instructions to translate Cookie Autodelete Regex are on GitHub Page",
         "New Languages: pt_PT, es"
       ]
     },

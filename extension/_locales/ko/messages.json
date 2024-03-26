@@ -100,7 +100,7 @@
     "description": "Control your cookies! Automatically delete unwanted cookies from your closed tabs while keeping the ones you want."
   },
   "extensionName": {
-    "message": "Cookie AutoDelete",
+    "message": "Cookie Autodelete Regex",
     "description": "Name of the extension."
   },
   "faqText": {
@@ -297,7 +297,7 @@
     "placeholders": {
       "CAD": {
         "content": "CAD",
-        "example": "CAD - Short form of Cookie AutoDelete"
+        "example": "CAD - Short form of Cookie Autodelete Regex"
       }
     }
   },
@@ -323,7 +323,7 @@
     "placeholders": {
       "CAD": {
         "content": "$1",
-        "example": "CAD or Cookie AutoDelete"
+        "example": "CAD or Cookie Autodelete Regex"
       }
     }
   },

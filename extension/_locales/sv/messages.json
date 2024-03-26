@@ -282,7 +282,7 @@
     "description": "Control your cookies! Automatically delete unwanted cookies from your closed tabs while keeping the ones you want."
   },
   "extensionName": {
-    "message": "Cookie AutoDelete",
+    "message": "Cookie Autodelete Regex",
     "description": "Name of the extension."
   },
   "faqText": {
@@ -845,11 +845,11 @@
   },
   "reviewLinkMessage": {
     "message": "Tack för att du provar $cadTitle$. Om du gillar det, kanske du vill lämna en recension.",
-    "description": "Thanks for trying out Cookie AutoDelete. If you liked it, then please give a review.",
+    "description": "Thanks for trying out Cookie Autodelete Regex. If you liked it, then please give a review.",
     "placeholders": {
       "cadTitle": {
         "content": "$1",
-        "example": "Cookie AutoDelete"
+        "example": "Cookie Autodelete Regex"
       }
     }
   },
@@ -895,7 +895,7 @@
     "placeholders": {
       "CAD": {
         "content": "CAD",
-        "example": "CAD - Short form of Cookie AutoDelete"
+        "example": "CAD - Short form of Cookie Autodelete Regex"
       }
     }
   },
@@ -949,7 +949,7 @@
     "placeholders": {
       "CAD": {
         "content": "$1",
-        "example": "CAD or Cookie AutoDelete"
+        "example": "CAD or Cookie Autodelete Regex"
       }
     }
   },
@@ -965,11 +965,11 @@
   },
   "welcomeMessage": {
     "message": "Hej! Under den här sessionen har $cadTitle$ tagit bort $sessionDeleted$ av sammanlagt $totalDeleted$ cookies.",
-    "description": "Hi there! During this session, Cookie AutoDelete has deleted 123 cookies and in total 456 cookies.",
+    "description": "Hi there! During this session, Cookie Autodelete Regex has deleted 123 cookies and in total 456 cookies.",
     "placeholders": {
       "cadTitle": {
         "content": "$1",
-        "example": "Cookie AutoDelete"
+        "example": "Cookie Autodelete Regex"
       },
       "sessionDeleted": {
         "content": "$2",
