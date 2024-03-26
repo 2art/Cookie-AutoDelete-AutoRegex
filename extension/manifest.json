@@ -18,7 +18,7 @@
     "default_icon": {
       "48": "icons/icon_48.png"
     },
-    "default_title": "Cookie AutoDelete",
+    "default_title": "Cookie AutoDelete Regex",
     "default_popup": "popup/popup.html"
   },
   "icons": {
