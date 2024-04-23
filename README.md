@@ -1,3 +1,4 @@
+<!--
 [link-amo]: https://addons.mozilla.org/en-US/firefox/addon/cookie-autodelete/
 [link-cws]: https://chrome.google.com/webstore/detail/cookie-autodelete/fhcgjolkccmbidfldomjliifgaodjagh
 [link-edge]: https://microsoftedge.microsoft.com/addons/detail/djkjpnciiommncecmdefpdllknjdmmmo
@@ -5,8 +6,11 @@
 | Latest Release Tests ![Latest Release](https://img.shields.io/github/v/release/Cookie-AutoDelete/Cookie-AutoDelete) | Development Tests | Localization | Coverage |
 | ------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![Tagged Release Distribution](https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/workflows/Tagged%20Release%20Distribution/badge.svg) | ![Node.js CI Tests](https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/workflows/CI/badge.svg?branch=3.X.X-Branch) | [![Crowdin](https://d322cqt584bo4o.cloudfront.net/cookie-autodelete/localized.svg)](https://crowdin.com/project/cookie-autodelete) | [![Coverage Status](https://coveralls.io/repos/github/Cookie-AutoDelete/Cookie-AutoDelete/badge.svg?branch=3.X.X-Branch)](https://coveralls.io/github/Cookie-AutoDelete/Cookie-AutoDelete?branch=3.X.X-Branch) [![codecov](https://codecov.io/gh/Cookie-AutoDelete/Cookie-AutoDelete/branch/3.X.X-Branch/graph/badge.svg)](https://codecov.io/gh/Cookie-AutoDelete/Cookie-AutoDelete) |
+-->
 
-# Cookie AutoDelete
+# Cookie AutoDelete Regex
+
+(Cookie AutoDelete extension, with small modification that adds a regex URL match to possible greylist/whitelist selections.)
 
 Control your cookies! This extension is inspired by [Self-Destructing Cookies](https://addons.mozilla.org/en-US/firefox/addon/self-destructing-cookies/). When a tab closes, any cookies not being used are automatically deleted. Prevent tracking by other cookies and add only the ones you trust. Easily import and export your cookie whitelist.
 
